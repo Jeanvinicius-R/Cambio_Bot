@@ -1,0 +1,77 @@
+version: "3.1"
+
+intents:
+  - cumprimentar
+  - despedir
+  - converter_moeda
+  - listar_moedas
+  - afirmar
+  - negar
+  - bot_desafio
+
+entities:
+  - moeda_origem
+  - moeda_destino
+  - valor
+
+slots:
+  moeda_origem:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: moeda_origem
+
+  moeda_destino:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: moeda_destino
+
+  valor:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: valor
+
+responses:
+  utter_cumprimentar:
+    - text: "Olá! 👋 Sou o **CambioBot**, seu assistente de câmbio! Posso converter moedas em tempo real. Tente: *\"Converta 100 dólares para reais\"*."
+    - text: "Oi! Bem-vindo ao **CambioBot**! 💱 Me diga o valor e as moedas que deseja converter."
+
+  utter_despedir:
+    - text: "Até logo! 👋 Volte sempre que precisar converter moedas."
+    - text: "Tchau! Foi um prazer ajudar. 💵 Boas transferências!"
+
+  utter_bot_desafio:
+    - text: "Sou o CambioBot, um assistente virtual criado para facilitar a conversão de moedas em tempo real! 🤖💱"
+
+  utter_pedir_moeda_origem:
+    - text: "De qual moeda você quer converter? (ex: dólar, euro, real, libra...)"
+
+  utter_pedir_moeda_destino:
+    - text: "Para qual moeda você quer converter? (ex: real, dólar, euro, iene...)"
+
+  utter_pedir_valor:
+    - text: "Qual é o valor que você deseja converter?"
+
+  utter_fallback:
+    - text: "Não entendi muito bem. 🤔 Tente algo como: *\"Converta 50 euros para dólares\"* ou *\"Quais moedas você suporta?\"*"
+
+  utter_iamabot:
+    - text: "Sou um assistente virtual especializado em câmbio de moedas! 💱"
+
+actions:
+  - action_converter_moeda
+  - action_listar_moedas
+  - validate_form_conversao
+
+forms:
+  form_conversao:
+    required_slots:
+      - moeda_origem
+      - moeda_destino
+      - valor
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,27 @@
+version: "3.1"
+
+rules:
+  - rule: Responder saudação
+    steps:
+      - intent: cumprimentar
+      - action: utter_cumprimentar
+
+  - rule: Responder despedida
+    steps:
+      - intent: despedir
+      - action: utter_despedir
+
+  - rule: Responder desafio bot
+    steps:
+      - intent: bot_desafio
+      - action: utter_bot_desafio
+
+  - rule: Listar moedas disponíveis
+    steps:
+      - intent: listar_moedas
+      - action: action_listar_moedas
+
+  - rule: Fallback quando não entender
+    steps:
+      - intent: nlu_fallback
+      - action: utter_fallback

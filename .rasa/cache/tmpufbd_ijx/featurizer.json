@@ -1,0 +1,66 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "afirmar": 0,
+        "back": 1,
+        "bot_desafio": 2,
+        "converter_moeda": 3,
+        "cumprimentar": 4,
+        "despedir": 5,
+        "listar_moedas": 6,
+        "negar": 7,
+        "nlu_fallback": 8,
+        "out_of_scope": 9,
+        "restart": 10,
+        "session_start": 11
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_converter_moeda": 13,
+        "action_listar_moedas": 14,
+        "validate_form_conversao": 15,
+        "utter_bot_desafio": 16,
+        "utter_cumprimentar": 17,
+        "utter_despedir": 18,
+        "utter_fallback": 19,
+        "utter_iamabot": 20,
+        "utter_pedir_moeda_destino": 21,
+        "utter_pedir_moeda_origem": 22,
+        "utter_pedir_valor": 23,
+        "form_conversao": 24
+      },
+      "entities": {
+        "moeda_destino": 0,
+        "moeda_origem": 1,
+        "valor": 2
+      },
+      "slots": {
+        "moeda_origem_0": 0,
+        "moeda_destino_0": 1,
+        "valor_0": 2,
+        "valor_1": 3
+      },
+      "active_loop": {
+        "form_conversao": 0
+      }
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

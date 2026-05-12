@@ -1,0 +1,26 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"listar_moedas\"}}]": "action_listar_moedas",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"listar_moedas\"}}, {\"prev_action\": {\"action_name\": \"action_listar_moedas\"}, \"user\": {\"intent\": \"listar_moedas\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_desafio\"}}]": "utter_bot_desafio",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_desafio\"}}, {\"prev_action\": {\"action_name\": \"utter_bot_desafio\"}, \"user\": {\"intent\": \"bot_desafio\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "utter_fallback",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_fallback\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cumprimentar\"}}]": "utter_cumprimentar",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cumprimentar\"}}, {\"prev_action\": {\"action_name\": \"utter_cumprimentar\"}, \"user\": {\"intent\": \"cumprimentar\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"despedir\"}}]": "utter_despedir",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"despedir\"}}, {\"prev_action\": {\"action_name\": \"utter_despedir\"}, \"user\": {\"intent\": \"despedir\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "handling active loops and forms - form_conversao",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "predicting default action with intent back",
+      "handling active loops and forms - form_conversao - action_listen"
+    ]
+  }
+}

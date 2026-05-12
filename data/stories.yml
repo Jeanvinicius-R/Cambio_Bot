@@ -1,0 +1,91 @@
+version: "3.1"
+
+stories:
+  - story: saudação e conversão completa
+    steps:
+      - intent: cumprimentar
+      - action: utter_cumprimentar
+      - intent: converter_moeda
+        entities:
+          - moeda_origem: "USD"
+          - moeda_destino: "BRL"
+          - valor: 100
+      - action: action_converter_moeda
+
+  - story: conversão direta com todos os dados
+    steps:
+      - intent: converter_moeda
+        entities:
+          - moeda_origem: "EUR"
+          - moeda_destino: "BRL"
+          - valor: 50
+      - action: action_converter_moeda
+
+  - story: conversão sem valor - bot pede
+    steps:
+      - intent: converter_moeda
+        entities:
+          - moeda_origem: "USD"
+          - moeda_destino: "BRL"
+      - action: utter_pedir_valor
+      - intent: converter_moeda
+        entities:
+          - valor: 200
+      - action: action_converter_moeda
+
+  - story: conversão sem moeda origem - bot pede
+    steps:
+      - intent: converter_moeda
+        entities:
+          - moeda_destino: "BRL"
+          - valor: 100
+      - action: utter_pedir_moeda_origem
+      - intent: converter_moeda
+        entities:
+          - moeda_origem: "USD"
+      - action: action_converter_moeda
+
+  - story: conversão sem moeda destino - bot pede
+    steps:
+      - intent: converter_moeda
+        entities:
+          - moeda_origem: "USD"
+          - valor: 100
+      - action: utter_pedir_moeda_destino
+      - intent: converter_moeda
+        entities:
+          - moeda_destino: "BRL"
+      - action: action_converter_moeda
+
+  - story: listar moedas e depois converter
+    steps:
+      - intent: listar_moedas
+      - action: action_listar_moedas
+      - intent: converter_moeda
+        entities:
+          - moeda_origem: "EUR"
+          - moeda_destino: "BRL"
+          - valor: 300
+      - action: action_converter_moeda
+
+  - story: despedida
+    steps:
+      - intent: despedir
+      - action: utter_despedir
+
+  - story: saudação e despedida
+    steps:
+      - intent: cumprimentar
+      - action: utter_cumprimentar
+      - intent: despedir
+      - action: utter_despedir
+
+  - story: desafio bot
+    steps:
+      - intent: bot_desafio
+      - action: utter_bot_desafio
+
+  - story: fallback
+    steps:
+      - intent: nlu_fallback
+      - action: utter_fallback

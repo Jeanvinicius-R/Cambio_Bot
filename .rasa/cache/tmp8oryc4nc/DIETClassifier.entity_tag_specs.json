@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-moeda_destino",
+      "2": "I-moeda_destino",
+      "3": "L-moeda_destino",
+      "4": "U-moeda_destino",
+      "5": "B-moeda_origem",
+      "6": "I-moeda_origem",
+      "7": "L-moeda_origem",
+      "8": "U-moeda_origem",
+      "9": "B-valor",
+      "10": "I-valor",
+      "11": "L-valor",
+      "12": "U-valor",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-moeda_destino": 1,
+      "I-moeda_destino": 2,
+      "L-moeda_destino": 3,
+      "U-moeda_destino": 4,
+      "B-moeda_origem": 5,
+      "I-moeda_origem": 6,
+      "L-moeda_origem": 7,
+      "U-moeda_origem": 8,
+      "B-valor": 9,
+      "I-valor": 10,
+      "L-valor": 11,
+      "U-valor": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

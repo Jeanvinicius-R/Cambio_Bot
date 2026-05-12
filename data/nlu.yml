@@ -1,0 +1,180 @@
+version: "3.1"
+
+nlu:
+  - intent: cumprimentar
+    examples: |
+      - olá
+      - oi
+      - oi, tudo bem?
+      - bom dia
+      - boa tarde
+      - boa noite
+      - olá, preciso de ajuda
+      - hey
+      - e aí
+      - oi bot
+      - olá CambioBot
+
+  - intent: despedir
+    examples: |
+      - tchau
+      - até logo
+      - até mais
+      - adeus
+      - até
+      - obrigado, tchau
+      - valeu, até mais
+      - obrigado pela ajuda
+      - foi ótimo, tchau
+      - encerrar
+
+  - intent: bot_desafio
+    examples: |
+      - você é um bot?
+      - você é humano?
+      - você é uma máquina?
+      - está falando com uma pessoa?
+      - você é robô?
+      - quem é você?
+      - o que você faz?
+      - me fale sobre você
+
+  - intent: afirmar
+    examples: |
+      - sim
+      - yes
+      - claro
+      - com certeza
+      - correto
+      - isso mesmo
+      - quero sim
+      - pode ser
+      - ok
+
+  - intent: negar
+    examples: |
+      - não
+      - nao
+      - no
+      - não quero
+      - de jeito nenhum
+      - cancela
+      - deixa pra lá
+
+  - intent: listar_moedas
+    examples: |
+      - quais moedas você suporta?
+      - que moedas você conhece?
+      - moedas disponíveis
+      - quais são as moedas?
+      - me mostre as moedas
+      - quais moedas posso converter?
+      - listar moedas
+      - me diga as moedas
+      - que moedas estão disponíveis?
+      - quais currencies você tem?
+
+  - intent: converter_moeda
+    examples: |
+      - converta [100](valor) [dólares](moeda_origem) para [reais](moeda_destino)
+      - converter [50](valor) [euros](moeda_origem) para [reais](moeda_destino)
+      - quanto é [200](valor) [dólares](moeda_origem) em [reais](moeda_destino)
+      - [300](valor) [reais](moeda_origem) em [dólares](moeda_destino)
+      - quanto dá [1000](valor) [libras](moeda_origem) em [euros](moeda_destino)
+      - transforme [500](valor) [dólares](moeda_origem) em [euros](moeda_destino)
+      - quero converter [75](valor) [euros](moeda_origem) para [reais](moeda_destino)
+      - qual o valor de [100](valor) [dólares](moeda_origem) em [reais](moeda_destino)?
+      - [50](valor) [dólares](moeda_origem) vale quanto em [reais](moeda_destino)?
+      - me converta [250](valor) [reais](moeda_origem) em [dólares](moeda_destino)
+      - [1](valor) [euro](moeda_origem) em [real](moeda_destino)
+      - converta [1000](valor) [ienes](moeda_origem) para [reais](moeda_destino)
+      - [500](valor) [pesos](moeda_origem) em [reais](moeda_destino)
+      - converter [100](valor) [libras](moeda_origem) para [dólares](moeda_destino)
+      - quanto é [200](valor) [francos suíços](moeda_origem) em [dólares](moeda_destino)
+      - [100](valor) [USD](moeda_origem) para [BRL](moeda_destino)
+      - converter [50](valor) [EUR](moeda_origem) em [USD](moeda_destino)
+      - [200](valor) [BRL](moeda_origem) para [EUR](moeda_destino)
+      - quanto fica [500](valor) [dólares americanos](moeda_origem) em [reais brasileiros](moeda_destino)
+      - preciso converter [30](valor) [euros](moeda_origem) para [reais](moeda_destino)
+      - me diga quanto são [150](valor) [dólares](moeda_origem) em [reais](moeda_destino)
+      - cambio de [200](valor) [dólares](moeda_origem) para [reais](moeda_destino)
+      - quero saber [100](valor) [dólares](moeda_origem) em [pesos argentinos](moeda_destino)
+      - [100](valor) [reais](moeda_origem) em [euros](moeda_destino)
+      - converter [20](valor) [dólares](moeda_origem) pra [reais](moeda_destino)
+
+  - synonym: USD
+    examples: |
+      - dólar
+      - dólares
+      - dollar
+      - dollars
+      - dolar
+      - dolares
+      - dólar americano
+      - dólares americanos
+      - USD
+
+  - synonym: BRL
+    examples: |
+      - real
+      - reais
+      - real brasileiro
+      - reais brasileiros
+      - BRL
+
+  - synonym: EUR
+    examples: |
+      - euro
+      - euros
+      - EUR
+
+  - synonym: GBP
+    examples: |
+      - libra
+      - libras
+      - libra esterlina
+      - libras esterlinas
+      - GBP
+
+  - synonym: JPY
+    examples: |
+      - iene
+      - ienes
+      - yen
+      - yenes
+      - JPY
+
+  - synonym: ARS
+    examples: |
+      - peso argentino
+      - pesos argentinos
+      - peso
+      - pesos
+      - ARS
+
+  - synonym: CHF
+    examples: |
+      - franco suíço
+      - francos suíços
+      - franco
+      - CHF
+
+  - synonym: CAD
+    examples: |
+      - dólar canadense
+      - dólares canadenses
+      - CAD
+
+  - synonym: AUD
+    examples: |
+      - dólar australiano
+      - dólares australianos
+      - AUD
+
+  - synonym: CNY
+    examples: |
+      - yuan
+      - yuan chinês
+      - renminbi
+      - CNY
+    
